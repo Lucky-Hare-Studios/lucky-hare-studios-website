@@ -1,0 +1,133 @@
+body {
+  background: #0a0a0a;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: rgba(10,10,10,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+main {
+  padding: 40px;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at center, rgba(0,240,255,0.08), transparent 60%),
+    radial-gradient(circle at top, rgba(155,92,255,0.08), transparent 60%),
+    #0a0a0a;
+
+  color: white;
+  padding: 20px;
+  
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 72px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px rgba(0,240,255,0.25);
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.7;
+  margin-bottom: 30px;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 12px 20px;
+  background: #00f0ff;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0,240,255,0.1);
+  box-shadow: 0 0 12px rgba(0,240,255,0.4);
+}
+
+.btn.secondary:hover {
+  background: rgba(0,240,255,0.1);
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.game-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 200px;
+  color: white;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.game-card h2,
+.game-card p {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  position: relative;
+  z-index: 2;
+}
+
+.game-card.epsilon {
+  background-image: url("epsilon-zero.png");
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.2)
+  );
+}
+
