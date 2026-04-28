@@ -15,13 +15,18 @@
   <p>We build worlds. You play them.</p>
 
   <div class="hero-buttons">
-    <a href="/games.html" class="btn">View Games</a>
-    <a href="/about.html" class="btn secondary">About Us</a>
+    <a href="/games" class="btn">View Games</a>
+    <a href="/about" class="btn secondary">About Us</a>
   </div>
 </section>
   </main>
 
 <div id="footer"></div>
-<script src="include.js"></script>
+<script src="/include.js"></script>
 </body>
+<script>
+  if(window.location.pathname.endsWith("index.html")){
+    window.location.replace("/")
+  }
+</script>
 </html>
