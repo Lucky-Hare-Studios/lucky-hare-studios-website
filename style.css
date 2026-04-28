@@ -119,6 +119,7 @@ main {
 
 .game-card.epsilon {
   background-image: url("epsilon-zero.png");
+  background-position: bottom;
 }
 
 .overlay {
